@@ -40,6 +40,12 @@ button {
   border-radius: 50px;
   background-color: #53FFAA;
 }
+button p {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  position: absolute;
+}
 button:hover {
   box-shadow: 0 0 40px 0 #53ffaa;
 }

@@ -982,8 +982,8 @@
       "ft" : 2,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/css\/app.css",
-      "oF" : 2,
+      "oAP" : "\/sass\/app.css",
+      "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
