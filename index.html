@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class='container'>
+  <p class="adviceID">Advice #<span></span></p>
+
+  <p class="adviceText">"<span></span>"</p>
+  <button onclick="Advice()"><img src="./images/icon-dice.svg"/></button>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://YuriGuernsey.com">YuriGuernsey</a>.
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    Advice();
+
+
+    function Advice() {
+      var apiURL = 'https://cors-anywhere.herokuapp.com/api.adviceslip.com/advice';
+
+      return $.ajax({
+        type: 'GET',
+        url: apiURL,
+        contentType: 'application/json',
+        processData: false
+      }).done(function (data) {
+        const dataObj = JSON.parse(data);
+          console.log(dataObj.slip)
+          $('.adviceID span').text(dataObj.slip.id);
+          $('.adviceText span').text(dataObj.slip.advice);
+
+      });
+    }
+  </script>
+</body>
+
+</html>

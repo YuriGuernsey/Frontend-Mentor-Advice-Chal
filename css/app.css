@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "manrope";
+  src: url("../font/Manrope-VariableFont_wght.ttf");
+}
+/* ==============================
+ * PLUGINS & THIRD PARTY STYLES
+ * ============================== */
+/* ==============================
+ * BASE STYLES
+ * ============================== */
+body {
+  background: #202733;
+  color: #fff;
+  text-align: center;
+  font-family: "manrope", sans-serif;
+}
+
+.attribution {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: unset;
+}
+.attribution a {
+  color: #53FFAA;
+}
+
+button {
+  border: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  display: block;
+  width: 65px;
+  margin: 0 auto;
+  height: 65px;
+  border-radius: 50px;
+  background-color: #53FFAA;
+}
+button:hover {
+  box-shadow: 0 0 40px 0 #53ffaa;
+}
+
+@media (max-width: 480px) {
+  body .container {
+    width: auto;
+    margin: 0px 20px;
+    box-sizing: border-box;
+    padding: auto 20px;
+  }
+  body .adviceText::after {
+    width: auto;
+    background-image: url("../../images/pattern-divider-mobile.svg");
+  }
+}
+/* ==============================
+ * LAYOUT STYLES
+ * ============================== */
+/* ==============================
+ * MODULE STYLES
+ * ============================== */
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  height: fit-content;
+  width: 540px;
+  background: #313A48;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.adviceID {
+  color: #53FFAA;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.adviceText {
+  color: #CEE3E9;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 38px;
+}
+.adviceText::after {
+  margin-top: 40px;
+  display: block;
+  content: "";
+  background-image: url("../../images/pattern-divider-desktop.svg");
+  background-size: 100% 100%;
+  max-width: 495px;
+  width: 100%;
+  background-position: center;
+  height: 20px;
+}

@@ -1,0 +1,36 @@
+.container
+    @include position(absolute, 0)
+    top: 50%
+    transform: translateY(-50%)
+    margin: 0 auto
+    @include size(540px, fit-content)
+    background: $DarkGrayishBlue
+    @include padding(40px)
+    box-sizing: border-box
+    box-shadow: 30px 50px 80px rgba(0 0 0 / 10%)
+    border-radius: 15px
+
+.adviceID
+    color: $NeonGreen
+    font-weight: 800
+    font-size: 20px
+    line-height: 18px
+
+.adviceText
+    color: $LightCyan
+    font-weight: 800
+    font-size: 28px
+    line-height: 38px
+
+    &::after
+        margin-top: 40px
+        display: block
+        content: ''
+        background-image: url('../../images/pattern-divider-desktop.svg')
+        background-size: 100% 100%
+        max-width: 495px
+        width: 100%
+        background-position: center
+        height: 20px
+
+
